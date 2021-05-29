@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/fragmentA">
+
+    <fragment
+        android:id="@+id/fragmentA"
+        android:name="com.s95ammar.navigationcomponentdemo.FragmentA"
+        android:label="FragmentA" >
+        <action
+            android:id="@+id/action_fragmentA_to_fragmentB"
+            app:destination="@id/fragmentB" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentB"
+        android:name="com.s95ammar.navigationcomponentdemo.FragmentB"
+        android:label="FragmentB" >
+        <action
+            android:id="@+id/action_fragmentB_to_fragmentC"
+            app:destination="@id/fragmentC" />
+        <argument
+            android:name="my_name"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentC"
+        android:name="com.s95ammar.navigationcomponentdemo.FragmentC"
+        android:label="FragmentC" >
+        <action
+            android:id="@+id/action_fragmentC_to_fragmentD"
+            app:destination="@id/fragmentD" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentD"
+        android:name="com.s95ammar.navigationcomponentdemo.FragmentD"
+        android:label="FragmentD" >
+        <action
+            android:id="@+id/action_fragmentD_to_fragmentE"
+            app:destination="@id/fragmentE" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentE"
+        android:name="com.s95ammar.navigationcomponentdemo.FragmentE"
+        android:label="FragmentE" >
+        <action
+            android:id="@+id/action_fragmentE_to_fragmentA"
+            app:destination="@id/fragmentA"
+            app:popUpTo="@id/fragmentA"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
